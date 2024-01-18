@@ -2,7 +2,7 @@
 
 This directory contains scripts to wrangle data and generate files needed to run the EA GLM with 2 mm and 6mm smoothing, and with and without GSR for SPINS and SPASD participants.  
 
-Data directory is where outputs are stored before being moved to the archive (/archive/data/SP*/pipelines/ea_glm).  
+**Data** directory is where outputs are stored before being moved to the archive (/archive/data/SP*/pipelines/ea_glm).  
 
 **Code** directory includes scripts to run the EA GLM and generate files needed for analyses:  
 Activate corresponding python env before running any .py scripts using source /projects/loliver/SPINS_ASD_EA_GLM/code/py_venv/bin/activate (see note below re this)  
@@ -96,11 +96,11 @@ res_file = File(desc="output residual files", argstr="-errts %s")
 Also need to comment out REML outputs (different model type):  
 class DeconvolveOutputSpec(TraitedSpec):
     out_file = File(desc="output statistics file", exists=True)
-    #reml_script = File(
-    #    desc="automatical generated script to run 3dREMLfit", exists=True
-    #)  
+    \#reml_script = File(
+    \#    desc="automatical generated script to run 3dREMLfit", exists=True
+    \#)  
 
- # outputs["reml_script"] = self._gen_fname(suffix=".REML_cmd", **_gen_fname_opts)  
+ \# outputs["reml_script"] = self._gen_fname(suffix=".REML_cmd", **_gen_fname_opts)  
 
 
 ## Other Notes:  
