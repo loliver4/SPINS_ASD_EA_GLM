@@ -6,11 +6,11 @@ This directory contains scripts to wrangle data and generate files needed to run
 
 **Code** directory includes scripts to run the EA GLM and generate files needed for analyses:  
 Activate corresponding python env before running any .py scripts using source /projects/loliver/SPINS_ASD_EA_GLM/code/py_venv/bin/activate (see note below re this)  
-1) cifti_clean_EA_*mm_*.sh to smooth outputs (2 or 6 mm) and drop first 4 TRs after fmriprep and ciftify have been run  
+1) cifti_clean_EA_\*mm_\*.sh to smooth outputs (2 or 6 mm) and drop first 4 TRs after fmriprep and ciftify have been run  
 2) parse_EA_task_tsv_to_AFNI_format_*.sh (which runs parse_EA_task_tsv_to_AFNI_format.py) to generate 1D regressor files needed for the GLM from the EA task tsvs  
      For ZHP participants specifically (see below): parse_EA_task_tsv_to_AFNI_format_ZHP.sh (which runs parse_EA_task_tsv_to_AFNI_format_ZHP.py); SPINSother refers to SPINS participants other than ZHP  
 3) parse_confounds_*.sh (which runs corresponding parse_confounds_*.py, with GSR (36p) or without GSR (32p)) to generate confound regressor file needed for the GLM  
-4) EA_GLM_*mm_*.sh (which runs corresponding EA_GLM_*mm_*.py, with 2 or 6 mm smoothing, and with or without GSR) to run the EA GLM  
+4) EA_GLM_\*mm_\*.sh (which runs corresponding EA_GLM_*mm_*.py, with 2 or 6 mm smoothing, and with or without GSR) to run the EA GLM  
 5) EA_GLM_subbrick_extract_*.sh (which runs EA_GLM_subbrick_extract.py) to extract coefficients and t-stat maps for further analyses (e.g., PALM)  
 6) rename_GLM_files.sh to rename the residual and design matrix files in line with the extracted subbricks (optional)  
 
