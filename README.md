@@ -2,10 +2,11 @@
 
 This directory contains scripts to wrangle data and generate files needed to run the EA GLM with 2 mm and 6mm smoothing, and with and without GSR for SPINS and SPASD participants.  
 
-**Data** directory is where outputs are stored before being moved to the archive (/archive/data/SP*/pipelines/ea_glm).  
+**data** directory is where outputs are stored before being moved to the archive (/archive/data/SP*/pipelines/ea_glm).  
 
-**Code** directory includes scripts to run the EA GLM and generate files needed for analyses:  
-Activate corresponding python env before running any .py scripts using source /projects/loliver/SPINS_ASD_EA_GLM/code/py_venv/bin/activate (see note below re this)  
+Activate corresponding python env before running any .py scripts in code using source /projects/loliver/SPINS_ASD_EA_GLM/code/py_venv/bin/activate (see note below re this). The requirements.txt file lists packages needed to reproduce the analysis environment.  
+
+**code** directory includes scripts to run the EA GLM and generate files needed for analyses:    
 1) cifti_clean_EA_\*mm_\*.sh to smooth outputs (2 or 6 mm) and drop first 4 TRs after fmriprep and ciftify have been run  
 2) parse_EA_task_tsv_to_AFNI_format_*.sh (which runs parse_EA_task_tsv_to_AFNI_format.py) to generate 1D regressor files needed for the GLM from the EA task tsvs  
      For ZHP participants specifically (see below): parse_EA_task_tsv_to_AFNI_format_ZHP.sh (which runs parse_EA_task_tsv_to_AFNI_format_ZHP.py); SPINSother refers to SPINS participants other than ZHP  
